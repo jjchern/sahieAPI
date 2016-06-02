@@ -1,0 +1,19 @@
+Package: sahieAPI
+Title: Interface to the Census Bureau's API for Small Area Health Insurance Estimates (SAHIE)
+Version: 0.0.0.9000
+Authors@R: 'JJ Chen <jiajia.chern@gmail.com> [aut, cre]'
+Description: An R client for Census Bureau's API for Small Area Health Insurance Estimates (SAHIE).
+Depends:
+    R (>= 3.3.0)
+License: CC0
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/jjchern/sahieAPI
+BugReports: https://github.com/jjchern/sahieAPI/issues
+Imports:
+    tibble,
+    httr,
+    readr,
+    jsonlite,
+    purrr
+RoxygenNote: 5.0.1
