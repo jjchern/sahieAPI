@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 
 # About
 
+[![Travis-CI Build Status](https://travis-ci.org/jjchern/sahieAPI.svg?branch=master)](https://travis-ci.org/jjchern/sahieAPI)
+
 `sahieAPI` is an R client for Census Bureau's API for [**S**mall **A**rea **H**ealth **I**nsurance **E**stimates (SAHIE)](http://www.census.gov/data/developers/data-sets/Health-Insurance-Statistics.html):
 
 > The Small Area Health Insurance Estimates (SAHIE) program was created to develop model-based estimates of health insurance coverage for counties and states.  SAHIE is only source of single-year health insurance coverage estimates for all U.S. counties. This program is partially funded by the Centers for Disease Control and Prevention's (CDC), National Breast and Cervical Cancer Early Detection Program (NBCCEDP).   The SAHIE program models health insurance coverage by combining survey data from several sources and then producing timely and accurate estimates of health insurance coverage.  Additionally, the SAHIE program's age model methodology and estimates have undergone internal U.S. Census Bureau review as well as external review.
@@ -33,3 +35,14 @@ knitr::opts_chunk$set(
 # install.packages("devtools")
 devtools::install_github("jjchern/sahieAPI")
 ```
+
+# Usage
+
+```{r}
+# Get national level uninsurance rate for various income groups in 2013 and 2014
+sahieAPI::sahie_us(
+        year = 2013:2014, 
+        var = c("NAME", "NUI_PT", "IPR_DESC", "IPRCAT", "PCTUI_PT")
+)
+```
+
